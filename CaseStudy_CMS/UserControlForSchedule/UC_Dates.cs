@@ -16,7 +16,7 @@ namespace CaseStudy_CMS
         frm_EventDetails eventDetails;
         string year = UC_AddEvent.year.ToString();
         string month = UC_AddEvent.month.ToString();
-        string dateMonth;// date for the month
+        //string dateMonth;// date for the month
         string lblLength;
         public string fullDate;//exact date yyyy-MM-dd
 
@@ -57,14 +57,20 @@ namespace CaseStudy_CMS
             SQLQueries queries = new SQLQueries();
             
             fEvent.fullDate = fullDate;
-
             fEvent.EventList(fullDate);
-            fEvent.ShowDialog();
-            //to refresh if there is new add event
+            
+            //to refresh if there is new add event 
             queries.checkEvent(fullDate);
             if (queries.rowCount >= 1)
             {
                 lbl_EventCount.Text = queries.rowCount.ToString();
+                fEvent.ShowDialog();
+            }
+            else
+            {
+                frm_EventDetails eventDetails = new frm_EventDetails();
+                eventDetails.lbl_EventDate.Text = fullDate;
+                eventDetails.ShowDialog();
             }
             //send current date to the eventDetails form
 

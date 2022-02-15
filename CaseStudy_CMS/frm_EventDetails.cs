@@ -12,9 +12,12 @@ namespace CaseStudy_CMS
 {
     public partial class frm_EventDetails : Form
     {
+        public string eventID;
         public frm_EventDetails()
         {
             InitializeComponent();
+            UC_Dates userDates = new UC_Dates();
+            lbl_EventDate.Text = userDates.fullDate;
         }
         
         private void btn_Venue_Click(object sender, EventArgs e)

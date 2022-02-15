@@ -70,7 +70,7 @@
             this.tb_NameofEvent.Location = new System.Drawing.Point(557, 67);
             this.tb_NameofEvent.Name = "tb_NameofEvent";
             this.tb_NameofEvent.Size = new System.Drawing.Size(181, 20);
-            this.tb_NameofEvent.TabIndex = 1;
+            this.tb_NameofEvent.TabIndex = 4;
             // 
             // label2
             // 
@@ -93,7 +93,7 @@
             0});
             this.nud_NoofGuest.Name = "nud_NoofGuest";
             this.nud_NoofGuest.Size = new System.Drawing.Size(181, 20);
-            this.nud_NoofGuest.TabIndex = 2;
+            this.nud_NoofGuest.TabIndex = 5;
             // 
             // btn_Food
             // 
@@ -140,7 +140,7 @@
             this.tb_Lastname.Location = new System.Drawing.Point(175, 112);
             this.tb_Lastname.Name = "tb_Lastname";
             this.tb_Lastname.Size = new System.Drawing.Size(181, 20);
-            this.tb_Lastname.TabIndex = 1;
+            this.tb_Lastname.TabIndex = 2;
             // 
             // label5
             // 
@@ -158,7 +158,7 @@
             this.tb_Contact.Location = new System.Drawing.Point(175, 155);
             this.tb_Contact.Name = "tb_Contact";
             this.tb_Contact.Size = new System.Drawing.Size(181, 20);
-            this.tb_Contact.TabIndex = 1;
+            this.tb_Contact.TabIndex = 3;
             // 
             // label6
             // 
@@ -340,16 +340,11 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tb_NameofEvent;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown nud_NoofGuest;
         private System.Windows.Forms.Button btn_Food;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tb_Firstname;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tb_Lastname;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox tb_Contact;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
@@ -361,5 +356,10 @@
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button btn_Save;
+        public System.Windows.Forms.TextBox tb_NameofEvent;
+        public System.Windows.Forms.NumericUpDown nud_NoofGuest;
+        public System.Windows.Forms.TextBox tb_Firstname;
+        public System.Windows.Forms.TextBox tb_Lastname;
+        public System.Windows.Forms.TextBox tb_Contact;
     }
 }

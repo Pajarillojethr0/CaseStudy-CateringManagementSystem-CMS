@@ -25,11 +25,6 @@ namespace CaseStudy_CMS
         
         private void frm_Event_Load(object sender, EventArgs e)
         {
-           if(flp_EventContainer.Controls.Count == 0)
-            {
-                frm_EventDetails eventDetails = new frm_EventDetails();
-                eventDetails.ShowDialog();
-            }
         }
 
         public void addUserControl(UserControl UC)
@@ -40,7 +35,8 @@ namespace CaseStudy_CMS
 
         public void EventList(string date)
         {
-            string query = "SELECT Name_of_Event FROM tbl_schedule WHERE Event_Date = '" + date + "'";
+            // this block of code is to add the user control in the flowlayout
+            string query = "SELECT ID, Name_of_Event FROM tbl_schedule WHERE Event_Date = '" + date + "'";
             
             ConnectDatabase conDb = new ConnectDatabase();
             conDb.connectSql();
@@ -54,10 +50,12 @@ namespace CaseStudy_CMS
             sqlDataReader = sqlCommand.ExecuteReader();
 
             ArrayList alEvent = new ArrayList();
+            ArrayList alID = new ArrayList();
 
             while (sqlDataReader.Read())
             {
                 alEvent.Add(sqlDataReader["Name_of_Event"].ToString());
+                alID.Add(sqlDataReader["ID"].ToString());
             }
            
             
@@ -65,6 +63,7 @@ namespace CaseStudy_CMS
             {
                 UC_Event userEvent = new UC_Event();
                 userEvent.lbl_EventName.Text = alEvent[i].ToString();
+                userEvent.eventID = alID[i].ToString();
                 addUserControl(userEvent);
             }
 

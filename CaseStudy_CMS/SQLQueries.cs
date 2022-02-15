@@ -92,11 +92,44 @@ namespace CaseStudy_CMS
                 MyMessageBox.ShowMessage("Item Added Successfully", "Insert Task", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
                 conDb.sqlConnection.Close();
             }
-            catch (MySqlException e)
+            catch (MySqlException)
             {
                 MyMessageBox.ShowMessage("Something went wrong", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
             }
 
+        }
+
+        public void EditEvent(string id)
+        {
+            // this block of code is to add the user control in the flowlayout
+            string query = "SELECT * FROM tbl_schedule WHERE ID = '" + id + "'";
+
+            ConnectDatabase conDb = new ConnectDatabase();
+            conDb.connectSql();
+            //open connection
+            conDb.sqlConnection.Open();
+            MySqlCommand sqlCommand;
+
+            MySqlDataReader sqlDataReader;
+            sqlCommand = new MySqlCommand(query, conDb.sqlConnection);
+
+            sqlDataReader = sqlCommand.ExecuteReader();
+
+            frm_EventDetails eventDetails = new frm_EventDetails();
+            while (sqlDataReader.Read())
+            {
+                eventDetails.eventID = (sqlDataReader["ID"].ToString());
+                eventDetails.tb_NameofEvent.Text = (sqlDataReader["Name_of_Event"].ToString());
+                eventDetails.nud_NoofGuest.Value = Convert.ToDecimal(sqlDataReader["No_of_Guest"]);
+                eventDetails.tb_Firstname.Text = (sqlDataReader["Firstname"].ToString());
+                eventDetails.tb_Lastname.Text = (sqlDataReader["Lastname"].ToString());
+                eventDetails.tb_Contact.Text = (sqlDataReader["Contact"].ToString());
+                eventDetails.lbl_EventDate.Text = (sqlDataReader["Event_Date"].ToString());
+            }
+            
+            sqlDataReader.Close();
+            conDb.sqlConnection.Close();
+            eventDetails.ShowDialog();
         }
     }
 }
