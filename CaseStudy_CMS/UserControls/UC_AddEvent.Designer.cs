@@ -40,7 +40,6 @@
             this.lbl_Month = new System.Windows.Forms.Label();
             this.flp_Calendar = new System.Windows.Forms.FlowLayoutPanel();
             this.topPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.btn_Next = new System.Windows.Forms.Button();
             this.btn_Previous = new System.Windows.Forms.Button();
             this.fillPanel.SuspendLayout();
@@ -49,6 +48,7 @@
             // 
             // fillPanel
             // 
+            this.fillPanel.AutoSize = true;
             this.fillPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(54)))), ((int)(((byte)(61)))));
             this.fillPanel.Controls.Add(this.lbl_Sunday);
             this.fillPanel.Controls.Add(this.lbl_Saturday);
@@ -59,10 +59,9 @@
             this.fillPanel.Controls.Add(this.lbl_Monday);
             this.fillPanel.Controls.Add(this.lbl_Month);
             this.fillPanel.Controls.Add(this.flp_Calendar);
-            this.fillPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fillPanel.Location = new System.Drawing.Point(0, 40);
             this.fillPanel.Name = "fillPanel";
-            this.fillPanel.Size = new System.Drawing.Size(1000, 660);
+            this.fillPanel.Size = new System.Drawing.Size(1003, 641);
             this.fillPanel.TabIndex = 5;
             // 
             // lbl_Sunday
@@ -164,24 +163,12 @@
             // topPanel
             // 
             this.topPanel.BackColor = System.Drawing.Color.DimGray;
-            this.topPanel.Controls.Add(this.button1);
             this.topPanel.Controls.Add(this.btn_Next);
             this.topPanel.Controls.Add(this.btn_Previous);
-            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1000, 40);
+            this.topPanel.Size = new System.Drawing.Size(1003, 40);
             this.topPanel.TabIndex = 4;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(775, 8);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Exit";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_Next
             // 
@@ -213,35 +200,35 @@
             // 
             // UC_AddEvent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.fillPanel);
             this.Controls.Add(this.topPanel);
             this.Name = "UC_AddEvent";
-            this.Size = new System.Drawing.Size(1000, 700);
+            this.Size = new System.Drawing.Size(1006, 684);
             this.Load += new System.EventHandler(this.UC_AddEvent_Load);
             this.fillPanel.ResumeLayout(false);
             this.fillPanel.PerformLayout();
             this.topPanel.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel fillPanel;
-        private System.Windows.Forms.Panel topPanel;
-        private System.Windows.Forms.Label lbl_Month;
-        private System.Windows.Forms.FlowLayoutPanel flp_Calendar;
-        private System.Windows.Forms.Button btn_Previous;
-        private System.Windows.Forms.Button btn_Next;
-        private System.Windows.Forms.Label lbl_Saturday;
-        private System.Windows.Forms.Label lbl_Friday;
-        private System.Windows.Forms.Label lbl_Wednesday;
-        private System.Windows.Forms.Label lbl_Thursday;
-        private System.Windows.Forms.Label lbl_Tuesday;
-        private System.Windows.Forms.Label lbl_Monday;
-        private System.Windows.Forms.Label lbl_Sunday;
-        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Panel fillPanel;
+        public System.Windows.Forms.Panel topPanel;
+        public System.Windows.Forms.Label lbl_Month;
+        public System.Windows.Forms.FlowLayoutPanel flp_Calendar;
+        public System.Windows.Forms.Button btn_Previous;
+        public System.Windows.Forms.Button btn_Next;
+        public System.Windows.Forms.Label lbl_Saturday;
+        public System.Windows.Forms.Label lbl_Friday;
+        public System.Windows.Forms.Label lbl_Wednesday;
+        public System.Windows.Forms.Label lbl_Thursday;
+        public System.Windows.Forms.Label lbl_Tuesday;
+        public System.Windows.Forms.Label lbl_Monday;
+        public System.Windows.Forms.Label lbl_Sunday;
     }
 }

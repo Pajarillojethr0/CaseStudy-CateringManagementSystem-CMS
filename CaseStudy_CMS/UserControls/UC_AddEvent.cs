@@ -14,20 +14,21 @@ namespace CaseStudy_CMS
 {
     public partial class UC_AddEvent : UserControl
     {
+      
         public UC_AddEvent()
         {
             InitializeComponent();
+            
         }
-        
-        private void UC_AddEvent_Load(object sender, EventArgs e)
-        {
-            DisplayDays();
-        }
-
         //get date today
         static DateTime currentDate = DateTime.Now;
         public static int month = currentDate.Month;
         public static int year = currentDate.Year;
+
+        private void UC_AddEvent_Load(object sender, EventArgs e)
+        {
+            DisplayDays();
+        }
 
         private void DisplayDays()
         {

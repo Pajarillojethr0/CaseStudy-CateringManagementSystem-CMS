@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Event));
             this.flp_EventContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.btn_NewEvent = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -43,14 +44,21 @@
             // 
             // btn_NewEvent
             // 
+            this.btn_NewEvent.FlatAppearance.BorderSize = 0;
+            this.btn_NewEvent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_NewEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_NewEvent.ForeColor = System.Drawing.Color.White;
+            this.btn_NewEvent.Image = ((System.Drawing.Image)(resources.GetObject("btn_NewEvent.Image")));
+            this.btn_NewEvent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_NewEvent.Location = new System.Drawing.Point(271, 215);
             this.btn_NewEvent.Name = "btn_NewEvent";
             this.btn_NewEvent.Size = new System.Drawing.Size(118, 33);
             this.btn_NewEvent.TabIndex = 1;
-            this.btn_NewEvent.Text = "New";
+            this.btn_NewEvent.Text = "     Event";
             this.btn_NewEvent.UseVisualStyleBackColor = true;
             this.btn_NewEvent.Click += new System.EventHandler(this.btn_NewEvent_Click);
+            this.btn_NewEvent.MouseEnter += new System.EventHandler(this.btn_NewEvent_MouseEnter);
+            this.btn_NewEvent.MouseLeave += new System.EventHandler(this.btn_NewEvent_MouseLeave);
             // 
             // frm_Event
             // 

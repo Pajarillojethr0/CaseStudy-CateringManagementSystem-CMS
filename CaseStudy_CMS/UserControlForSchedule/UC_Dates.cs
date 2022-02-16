@@ -18,13 +18,16 @@ namespace CaseStudy_CMS
         string month = UC_AddEvent.month.ToString();
         //string dateMonth;// date for the month
         string lblLength;
-        public string fullDate;//exact date yyyy-MM-dd
+        public string fullDate;//exact date yyyy-MM-dd\
+        public bool resize;
+        public bool small;
 
         public UC_Dates()
         {
             InitializeComponent();
+
         }
-        
+      
         public void Dates(int numdates)
         {
             lbl_day.Text = numdates.ToString();
@@ -52,29 +55,27 @@ namespace CaseStudy_CMS
             
         private void UC_Dates_Click(object sender, EventArgs e)
         {
-            eventDetails = new frm_EventDetails();
-            frm_Event fEvent = new frm_Event();
-            SQLQueries queries = new SQLQueries();
-            
-            fEvent.fullDate = fullDate;
-            fEvent.EventList(fullDate);
-            
-            //to refresh if there is new add event 
-            queries.checkEvent(fullDate);
-            if (queries.rowCount >= 1)
-            {
-                lbl_EventCount.Text = queries.rowCount.ToString();
-                fEvent.ShowDialog();
-            }
-            else
-            {
-                frm_EventDetails eventDetails = new frm_EventDetails();
-                eventDetails.lbl_EventDate.Text = fullDate;
-                eventDetails.ShowDialog();
-            }
-            //send current date to the eventDetails form
+                eventDetails = new frm_EventDetails();
+                frm_Event fEvent = new frm_Event();
+                SQLQueries queries = new SQLQueries();
 
-            //eventDetails.ShowDialog();
+                fEvent.fullDate = fullDate;
+                fEvent.EventList(fullDate);
+
+                //to refresh if there is new add event 
+                queries.checkEvent(fullDate);
+                if (queries.rowCount >= 1)
+                {
+                    lbl_EventCount.Text = queries.rowCount.ToString();
+                    fEvent.ShowDialog();
+                }
+                else
+                {
+                    frm_EventDetails eventDetails = new frm_EventDetails();
+                    eventDetails.lbl_EventDate.Text = fullDate;
+                    eventDetails.ShowDialog();
+                }
+            
         }
         
         private void reload()
@@ -84,7 +85,7 @@ namespace CaseStudy_CMS
         }
         private void UC_Dates_Load(object sender, EventArgs e)
         {
-           
+
         }
         
         

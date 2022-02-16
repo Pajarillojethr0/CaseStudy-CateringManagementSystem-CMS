@@ -41,10 +41,8 @@
             this.lbl_User = new System.Windows.Forms.Label();
             this.pb_User = new System.Windows.Forms.PictureBox();
             this.fillPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.sidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_User)).BeginInit();
-            this.fillPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidePanel
@@ -227,22 +225,11 @@
             // fillPanel
             // 
             this.fillPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(54)))), ((int)(((byte)(61)))));
-            this.fillPanel.Controls.Add(this.button1);
             this.fillPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fillPanel.Location = new System.Drawing.Point(200, 0);
             this.fillPanel.Name = "fillPanel";
             this.fillPanel.Size = new System.Drawing.Size(1000, 700);
             this.fillPanel.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(190, 81);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(177, 37);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frm_AdminDashboard
             // 
@@ -256,7 +243,6 @@
             this.Text = "frm_AdminDashboard";
             this.sidePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pb_User)).EndInit();
-            this.fillPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -275,6 +261,5 @@
         private System.Windows.Forms.Button btn_Task;
         private System.Windows.Forms.Button btn_AddEvent;
         private System.Windows.Forms.Button btn_Home;
-        private System.Windows.Forms.Button button1;
     }
 }

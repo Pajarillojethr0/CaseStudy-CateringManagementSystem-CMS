@@ -246,9 +246,6 @@ namespace CaseStudy_CMS
             userAccount = new UC_Account();
             addUserControl(userAccount);
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-        }
+        
     }
 }
