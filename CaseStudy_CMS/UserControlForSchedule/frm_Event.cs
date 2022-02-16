@@ -79,6 +79,15 @@ namespace CaseStudy_CMS
             eventDetails.ShowDialog();
             this.Close();
         }
-        
+
+        private void btn_NewEvent_MouseEnter(object sender, EventArgs e)
+        {
+            btn_NewEvent.BackColor = SystemColors.Highlight;
+        }
+
+        private void btn_NewEvent_MouseLeave(object sender, EventArgs e)
+        {
+            btn_NewEvent.BackColor = Color.FromArgb(39, 54, 61);
+        }
     }
 }
