@@ -51,7 +51,6 @@
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btn_Save = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nud_NoofGuest)).BeginInit();
             this.SuspendLayout();
@@ -299,15 +298,6 @@
             this.btn_Save.UseVisualStyleBackColor = true;
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(54)))), ((int)(((byte)(61)))));
-            this.panel1.Location = new System.Drawing.Point(54, 293);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(637, 446);
-            this.panel1.TabIndex = 7;
-            this.panel1.Visible = false;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(669, 254);
@@ -323,9 +313,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(54)))), ((int)(((byte)(61)))));
-            this.ClientSize = new System.Drawing.Size(777, 749);
+            this.ClientSize = new System.Drawing.Size(777, 416);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_Save);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.comboBox4);
@@ -385,7 +374,6 @@
         public System.Windows.Forms.TextBox tb_Lastname;
         public System.Windows.Forms.TextBox tb_Contact;
         public System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
     }
 }

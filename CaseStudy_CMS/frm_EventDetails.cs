@@ -12,7 +12,7 @@ namespace CaseStudy_CMS
 {
     public partial class frm_EventDetails : Form
     {
-        public bool resizeDate;
+        public bool doResize;
         public string eventID;
         public frm_EventDetails()
         {
@@ -31,6 +31,7 @@ namespace CaseStudy_CMS
 
         private void frm_EventDetails_Load(object sender, EventArgs e)
         {
+            tb_Contact.MaxLength = 11;
             maskedTextBox1.Mask = "00/00/0000";
             maskedTextBox1.MaskInputRejected += new MaskInputRejectedEventHandler(maskedTextBox1_MaskInputRejected);
         }
@@ -67,30 +68,7 @@ namespace CaseStudy_CMS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            panel1.Visible = true;
-            UC_AddEvent addEvent = new UC_AddEvent();
-            addEvent.Size = new Size(637, 446);
-            panel1.Controls.Add(addEvent);
-            UC_Dates userDates = new UC_Dates();
-            UC_Blank userBlank = new UC_Blank();
-
-            //resize user controls
-            userDates.resize = true;
-            userBlank.Size = new Size(77, 44);
-
-            //resize labels
-            addEvent.lbl_Monday.Font = new Font("Microsoft Sans Serif", 8, FontStyle.Regular);
-            addEvent.lbl_Tuesday.Font = new Font("Microsoft Sans Serif", 8, FontStyle.Regular);
-            addEvent.lbl_Wednesday.Font = new Font("Microsoft Sans Serif", 8, FontStyle.Regular);
-            addEvent.lbl_Thursday.Font = new Font("Microsoft Sans Serif", 8, FontStyle.Regular);
-            addEvent.lbl_Friday.Font = new Font("Microsoft Sans Serif", 8, FontStyle.Regular);
-            addEvent.lbl_Saturday.Font = new Font("Microsoft Sans Serif", 8, FontStyle.Regular);
-            addEvent.lbl_Sunday.Font = new Font("Microsoft Sans Serif", 8, FontStyle.Regular);
-            addEvent.lbl_Month.Font = new Font("Microsoft Sans Serif", 14, FontStyle.Regular);
-
-            //resize flow layout panel
-            addEvent.flp_Calendar.Size = new Size(581, 300);
-            addEvent.flp_Calendar.Location = new Point(22, 93);
+            
         }
     }
 }

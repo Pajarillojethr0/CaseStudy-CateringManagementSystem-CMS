@@ -56,13 +56,13 @@ namespace CaseStudy_CMS
             sqlDataReader = sqlCommand.ExecuteReader();
             if (sqlDataReader.Read())
             {
-                UC_Dates userDates = new UC_Dates();
+               // UC_Dates userDates = new UC_Dates();
                 string eventName = sqlDataReader["Name_of_Event"].ToString();
 
                 DataTable dataTable = new DataTable();
                 dataTable.Load(sqlDataReader);
 
-                rowCount = dataTable.Rows.Count;
+                rowCount = dataTable.Rows.Count;//number of data
                 rowCount++;
                 sqlDataReader.Dispose();
                 conDb.sqlConnection.Close();
@@ -77,6 +77,40 @@ namespace CaseStudy_CMS
 
         }
 
+        public string checkEventSmall(string date)
+        {
+            query = "SELECT * FROM tbl_schedule WHERE Event_Date = '" + date + "'";
+
+            //the path to connect
+            ConnectDatabase conDb = new ConnectDatabase();
+            conDb.connectSql();
+            //open connection
+            conDb.sqlConnection.Open();
+
+            sqlCommand = new MySqlCommand(query, conDb.sqlConnection);
+            sqlDataReader = sqlCommand.ExecuteReader();
+            if (sqlDataReader.Read())
+            {
+                // UC_Dates userDates = new UC_Dates();
+                string eventName = sqlDataReader["Name_of_Event"].ToString();
+
+                DataTable dataTable = new DataTable();
+                dataTable.Load(sqlDataReader);
+
+                rowCount = dataTable.Rows.Count;//number of data
+                rowCount++;
+                sqlDataReader.Dispose();
+                conDb.sqlConnection.Close();
+                return eventName;
+            }
+            else
+            {
+                sqlDataReader.Dispose();
+                conDb.sqlConnection.Close();
+                return null;
+            }
+
+        }
         public void InsertEventDetails(string nameofEvent, string noofGuest, string fName, string lName, string contact, string date)
         {
             ConnectDatabase conDb = new ConnectDatabase();

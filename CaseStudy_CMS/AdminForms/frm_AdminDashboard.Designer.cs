@@ -41,8 +41,10 @@
             this.lbl_User = new System.Windows.Forms.Label();
             this.pb_User = new System.Windows.Forms.PictureBox();
             this.fillPanel = new System.Windows.Forms.Panel();
+            this.uC_AddEvent1 = new CaseStudy_CMS.UC_AddEvent();
             this.sidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_User)).BeginInit();
+            this.fillPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidePanel
@@ -225,11 +227,20 @@
             // fillPanel
             // 
             this.fillPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(54)))), ((int)(((byte)(61)))));
+            this.fillPanel.Controls.Add(this.uC_AddEvent1);
             this.fillPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fillPanel.Location = new System.Drawing.Point(200, 0);
             this.fillPanel.Name = "fillPanel";
             this.fillPanel.Size = new System.Drawing.Size(1000, 700);
             this.fillPanel.TabIndex = 2;
+            // 
+            // uC_AddEvent1
+            // 
+            this.uC_AddEvent1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.uC_AddEvent1.Location = new System.Drawing.Point(0, 3);
+            this.uC_AddEvent1.Name = "uC_AddEvent1";
+            this.uC_AddEvent1.Size = new System.Drawing.Size(1006, 684);
+            this.uC_AddEvent1.TabIndex = 0;
             // 
             // frm_AdminDashboard
             // 
@@ -243,6 +254,7 @@
             this.Text = "frm_AdminDashboard";
             this.sidePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pb_User)).EndInit();
+            this.fillPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -261,5 +273,6 @@
         private System.Windows.Forms.Button btn_Task;
         private System.Windows.Forms.Button btn_AddEvent;
         private System.Windows.Forms.Button btn_Home;
+        private UC_AddEvent uC_AddEvent1;
     }
 }
