@@ -13,8 +13,8 @@ namespace CaseStudy_CMS
 {
     public partial class UC_SmallDates : UserControl
     {
-        string year = UC_AddEvent.year.ToString();
-        string month = UC_AddEvent.month.ToString();
+        string year = UC_Calendar.year.ToString();
+        string month = UC_Calendar.month.ToString();
         //string dateMonth;// date for the month
         string lblLength;
         public string smallFullDate;//exact date yyyy-MM-dd\
@@ -39,7 +39,17 @@ namespace CaseStudy_CMS
                 month = $"0{month}";
             }
             smallFullDate = $"{year}-{month}-{lbl_day.Text}";//full Date yyyy/MM/dd
+
+            ShowCountEvent();
+        }
             
+        private void UC_Dates_Click(object sender, EventArgs e)
+        {
+            ShowCountEvent();
+        }
+        
+        private void ShowCountEvent()
+        {
             SQLQueries queries = new SQLQueries();
             string eventName = queries.checkEventSmall(smallFullDate);//store return in eventName variable
 
@@ -47,25 +57,6 @@ namespace CaseStudy_CMS
             {
                 lbl_EventCount.Text = queries.rowCount.ToString();
             }
-        }
-            
-        private void UC_Dates_Click(object sender, EventArgs e)
-        {
-            SQLQueries queries = new SQLQueries();
-            MessageBox.Show("Adding");
-                //to refresh if there is new add event 
-                queries.checkEventSmall(smallFullDate);
-                if (queries.rowCount >= 1)
-                {
-                reload();
-                lbl_EventCount.Text = queries.rowCount.ToString();
-                }
-        }
-        
-        private void reload()
-        {
-            SQLQueries queries = new SQLQueries();
-            queries.checkEventSmall(smallFullDate);
         }
         private void UC_Dates_Load(object sender, EventArgs e)
         {

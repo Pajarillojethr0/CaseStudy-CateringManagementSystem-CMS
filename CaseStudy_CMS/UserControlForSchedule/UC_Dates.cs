@@ -40,14 +40,8 @@ namespace CaseStudy_CMS
                 month = $"0{month}";
             }
             fullDate = $"{year}-{month}-{lbl_day.Text}";//full Date yyyy/MM/dd
-            
-            SQLQueries queries = new SQLQueries();
-            string eventName = queries.checkEvent(fullDate);//store return in eventName variable
 
-            if (queries.rowCount >= 1)
-            {
-                lbl_EventCount.Text = queries.rowCount.ToString();
-            }
+            ShowCountEvent();
         }
             
         private void UC_Dates_Click(object sender, EventArgs e)
@@ -72,13 +66,19 @@ namespace CaseStudy_CMS
                     eventDetails.lbl_EventDate.Text = fullDate;
                     eventDetails.ShowDialog();
                 }
+            ShowCountEvent();
             
         }
         
-        private void reload()
+        private void ShowCountEvent()
         {
             SQLQueries queries = new SQLQueries();
-            queries.checkEvent(fullDate);
+            string eventName = queries.checkEvent(fullDate);//store return in eventName variable
+
+            if (queries.rowCount >= 1)
+            {
+                lbl_EventCount.Text = queries.rowCount.ToString();
+            }
         }
         private void UC_Dates_Load(object sender, EventArgs e)
         {

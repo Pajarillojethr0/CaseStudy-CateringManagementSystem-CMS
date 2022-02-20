@@ -65,10 +65,10 @@
       <DependentUpon>frm_EventDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="SQLQueries.cs" />
-    <Compile Include="UC_Calendar.cs">
+    <Compile Include="UserControlForSchedule\smallCalendar\UC_Calendar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Calendar.Designer.cs">
+    <Compile Include="UserControlForSchedule\smallCalendar\UC_Calendar.Designer.cs">
       <DependentUpon>UC_Calendar.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlForSchedule\frm_Event.cs">
@@ -177,7 +177,7 @@
     <EmbeddedResource Include="frm_EventDetails.resx">
       <DependentUpon>frm_EventDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Calendar.resx">
+    <EmbeddedResource Include="UserControlForSchedule\smallCalendar\UC_Calendar.resx">
       <DependentUpon>UC_Calendar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlForSchedule\frm_Event.resx">
