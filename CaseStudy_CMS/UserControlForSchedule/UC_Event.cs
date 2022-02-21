@@ -17,7 +17,6 @@ namespace CaseStudy_CMS
         public UC_Event()
         {
             InitializeComponent();
-           
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)
@@ -29,7 +28,10 @@ namespace CaseStudy_CMS
         {
             SQLQueries queries = new SQLQueries();
             queries.EditEvent(eventID);
-            
+        }
+
+        private void UC_Event_Load(object sender, EventArgs e)
+        {
         }
     }
 }

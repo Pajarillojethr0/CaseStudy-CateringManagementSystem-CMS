@@ -74,7 +74,6 @@
             this.Name = "frm_Event";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.frm_Event_Load);
             this.ResumeLayout(false);
 
         }

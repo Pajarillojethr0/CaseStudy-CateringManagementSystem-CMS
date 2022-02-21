@@ -13,6 +13,7 @@ namespace CaseStudy_CMS
 {
     public partial class UC_SmallDates : UserControl
     {
+        public bool calendarisShow;
         string year = UC_Calendar.year.ToString();
         string month = UC_Calendar.month.ToString();
         //string dateMonth;// date for the month
@@ -40,6 +41,7 @@ namespace CaseStudy_CMS
             }
             smallFullDate = $"{year}-{month}-{lbl_day.Text}";//full Date yyyy/MM/dd
 
+            highlightDate(smallFullDate);
             ShowCountEvent();
         }
             
@@ -61,6 +63,14 @@ namespace CaseStudy_CMS
         private void UC_Dates_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void highlightDate(string dateToday)
+        {
+            if (dateToday == DateTime.Now.ToString("yyyy-MM-dd"))
+            {
+                this.BackColor = Color.FromArgb(39, 54, 180);
+            }
         }
     }
 }

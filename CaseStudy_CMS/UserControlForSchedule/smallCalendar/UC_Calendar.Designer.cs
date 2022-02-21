@@ -40,6 +40,7 @@
             this.topPanel = new System.Windows.Forms.Panel();
             this.btn_Previous = new System.Windows.Forms.Button();
             this.btn_Next = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.topPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -154,6 +155,7 @@
             // topPanel
             // 
             this.topPanel.BackColor = System.Drawing.Color.DimGray;
+            this.topPanel.Controls.Add(this.button1);
             this.topPanel.Controls.Add(this.btn_Previous);
             this.topPanel.Controls.Add(this.btn_Next);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -190,11 +192,21 @@
             this.btn_Next.UseVisualStyleBackColor = true;
             this.btn_Next.Click += new System.EventHandler(this.btn_Next_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(335, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "exit";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // UC_Calendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(54)))), ((int)(((byte)(61)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(60)))), ((int)(((byte)(80)))));
             this.Controls.Add(this.lbl_Month);
             this.Controls.Add(this.lbl_Sunday);
             this.Controls.Add(this.lbl_Saturday);
@@ -228,5 +240,6 @@
         private System.Windows.Forms.Panel topPanel;
         private System.Windows.Forms.Button btn_Previous;
         private System.Windows.Forms.Button btn_Next;
+        private System.Windows.Forms.Button button1;
     }
 }

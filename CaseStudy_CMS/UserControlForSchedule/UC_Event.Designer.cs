@@ -75,6 +75,7 @@
             this.Controls.Add(this.lbl_EventName);
             this.Name = "UC_Event";
             this.Size = new System.Drawing.Size(360, 35);
+            this.Load += new System.EventHandler(this.UC_Event_Load);
             this.ResumeLayout(false);
 
         }

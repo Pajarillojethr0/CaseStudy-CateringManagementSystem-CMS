@@ -41,33 +41,34 @@ namespace CaseStudy_CMS
             }
             fullDate = $"{year}-{month}-{lbl_day.Text}";//full Date yyyy/MM/dd
 
+            highlightDate(fullDate);
             ShowCountEvent();
         }
             
         private void UC_Dates_Click(object sender, EventArgs e)
         {
-                eventDetails = new frm_EventDetails();
-                frm_Event fEvent = new frm_Event();
-                SQLQueries queries = new SQLQueries();
-
-                fEvent.fullDate = fullDate;
-                fEvent.EventList(fullDate);
-
-                //to refresh if there is new add event 
-                queries.checkEvent(fullDate);
-                if (queries.rowCount >= 1)
-                {
-                    lbl_EventCount.Text = queries.rowCount.ToString();
-                    fEvent.ShowDialog();
-                }
-                else
-                {
-                    frm_EventDetails eventDetails = new frm_EventDetails();
-                    eventDetails.lbl_EventDate.Text = fullDate;
-                    eventDetails.ShowDialog();
-                }
-            ShowCountEvent();
+            eventDetails = new frm_EventDetails();
+            frm_Event fEvent = new frm_Event();
+            SQLQueries queries = new SQLQueries();
             
+
+            fEvent.fullDate = fullDate;
+            fEvent.EventList(fullDate);
+            //eventDetails.lbl_EventDate.Text = fullDate;
+            //to refresh if there is new add event 
+            queries.checkEvent(fullDate);
+            if (queries.rowCount >= 1)
+            {
+                lbl_EventCount.Text = queries.rowCount.ToString();
+                fEvent.ShowDialog();
+            }
+            else
+            {
+                frm_EventDetails eventDetails = new frm_EventDetails();
+                eventDetails.lbl_EventDate.Text = fullDate;
+                eventDetails.ShowDialog();
+            }
+            ShowCountEvent();
         }
         
         private void ShowCountEvent()
@@ -82,7 +83,14 @@ namespace CaseStudy_CMS
         }
         private void UC_Dates_Load(object sender, EventArgs e)
         {
-
+            
+        }
+        private void highlightDate(string dateToday)
+        {
+            if (dateToday == DateTime.Now.ToString("yyyy-MM-dd"))
+            {
+                this.BackColor = Color.FromArgb(39, 54, 180);
+            }
         }
     }
 }

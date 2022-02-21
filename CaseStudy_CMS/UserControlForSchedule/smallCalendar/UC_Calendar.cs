@@ -170,5 +170,10 @@ namespace CaseStudy_CMS
                 flp_Calendar.Controls.Add(ucSBlank);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+        }
     }
 }

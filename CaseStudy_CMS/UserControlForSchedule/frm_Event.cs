@@ -22,10 +22,6 @@ namespace CaseStudy_CMS
         {
             InitializeComponent();
         }
-        
-        private void frm_Event_Load(object sender, EventArgs e)
-        {
-        }
 
         public void addUserControl(UserControl UC)
         {
@@ -71,14 +67,6 @@ namespace CaseStudy_CMS
             conDb.sqlConnection.Close();
         }
 
-        private void btn_NewEvent_Click(object sender, EventArgs e)
-        {
-            eventDetails = new frm_EventDetails();
-            eventDetails.lbl_EventDate.Text = fullDate;
-            eventDetails.ShowDialog();
-            this.Close();
-        }
-
         private void btn_NewEvent_MouseEnter(object sender, EventArgs e)
         {
             btn_NewEvent.BackColor = SystemColors.Highlight;
@@ -88,5 +76,14 @@ namespace CaseStudy_CMS
         {
             btn_NewEvent.BackColor = Color.FromArgb(39, 54, 61);
         }
+
+        private void btn_NewEvent_Click(object sender, EventArgs e)
+        {
+            eventDetails = new frm_EventDetails();
+            eventDetails.lbl_EventDate.Text = fullDate;
+            eventDetails.ShowDialog();
+            this.Close();
+        }
+        
     }
 }

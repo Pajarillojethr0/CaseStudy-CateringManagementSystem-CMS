@@ -158,12 +158,12 @@ namespace CaseStudy_CMS
                 eventDetails.tb_Firstname.Text = (sqlDataReader["Firstname"].ToString());
                 eventDetails.tb_Lastname.Text = (sqlDataReader["Lastname"].ToString());
                 eventDetails.tb_Contact.Text = (sqlDataReader["Contact"].ToString());
-                eventDetails.lbl_EventDate.Text = (sqlDataReader["Event_Date"].ToString());
+                eventDetails.Text = Convert.ToDateTime(sqlDataReader["Event_Date"]).ToString("yyyy-MM-dd");
             }
-            
             sqlDataReader.Close();
             conDb.sqlConnection.Close();
             eventDetails.ShowDialog();
         }
+        
     }
 }

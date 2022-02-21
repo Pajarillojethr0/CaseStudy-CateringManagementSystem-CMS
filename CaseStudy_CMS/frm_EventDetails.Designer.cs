@@ -29,320 +29,493 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_EventDetails));
+            this.lbl_EventName = new System.Windows.Forms.Label();
             this.tb_NameofEvent = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_GuestCount = new System.Windows.Forms.Label();
             this.nud_NoofGuest = new System.Windows.Forms.NumericUpDown();
-            this.btn_Food = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_Fname = new System.Windows.Forms.Label();
             this.tb_Firstname = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_Lname = new System.Windows.Forms.Label();
             this.tb_Lastname = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbl_Contact = new System.Windows.Forms.Label();
             this.tb_Contact = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.btn_Venue = new System.Windows.Forms.Button();
-            this.lbl_EventDate = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.lbl_EventStart = new System.Windows.Forms.Label();
+            this.cb_EventStartHour = new System.Windows.Forms.ComboBox();
+            this.lbl_EventEnd = new System.Windows.Forms.Label();
+            this.tTip_ErrorMessage = new System.Windows.Forms.ToolTip(this.components);
             this.btn_Save = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cb_EventStartMinutes = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cb_EventEndHour = new System.Windows.Forms.ComboBox();
+            this.cb_EventEndMinutes = new System.Windows.Forms.ComboBox();
+            this.btn_EditDate = new System.Windows.Forms.Button();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.lbl_EventDate = new System.Windows.Forms.Label();
+            this.mtb_EventDate = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nud_NoofGuest)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lbl_EventName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(417, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Name of Event";
+            this.lbl_EventName.AutoSize = true;
+            this.lbl_EventName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_EventName.ForeColor = System.Drawing.Color.White;
+            this.lbl_EventName.Location = new System.Drawing.Point(417, 93);
+            this.lbl_EventName.Name = "lbl_EventName";
+            this.lbl_EventName.Size = new System.Drawing.Size(114, 20);
+            this.lbl_EventName.TabIndex = 0;
+            this.lbl_EventName.Text = "Name of Event";
             // 
             // tb_NameofEvent
             // 
-            this.tb_NameofEvent.Location = new System.Drawing.Point(557, 38);
+            this.tb_NameofEvent.Location = new System.Drawing.Point(557, 93);
             this.tb_NameofEvent.Name = "tb_NameofEvent";
             this.tb_NameofEvent.Size = new System.Drawing.Size(181, 20);
             this.tb_NameofEvent.TabIndex = 4;
             // 
-            // label2
+            // lbl_GuestCount
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(400, 85);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Number of Guest";
+            this.lbl_GuestCount.AutoSize = true;
+            this.lbl_GuestCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_GuestCount.ForeColor = System.Drawing.Color.White;
+            this.lbl_GuestCount.Location = new System.Drawing.Point(400, 140);
+            this.lbl_GuestCount.Name = "lbl_GuestCount";
+            this.lbl_GuestCount.Size = new System.Drawing.Size(131, 20);
+            this.lbl_GuestCount.TabIndex = 0;
+            this.lbl_GuestCount.Text = "Number of Guest";
             // 
             // nud_NoofGuest
             // 
-            this.nud_NoofGuest.Location = new System.Drawing.Point(557, 88);
+            this.nud_NoofGuest.Location = new System.Drawing.Point(557, 143);
             this.nud_NoofGuest.Maximum = new decimal(new int[] {
             10000,
+            0,
+            0,
+            0});
+            this.nud_NoofGuest.Minimum = new decimal(new int[] {
+            1,
             0,
             0,
             0});
             this.nud_NoofGuest.Name = "nud_NoofGuest";
             this.nud_NoofGuest.Size = new System.Drawing.Size(181, 20);
             this.nud_NoofGuest.TabIndex = 5;
+            this.nud_NoofGuest.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // btn_Food
+            // lbl_Fname
             // 
-            this.btn_Food.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Food.Location = new System.Drawing.Point(457, 243);
-            this.btn_Food.Name = "btn_Food";
-            this.btn_Food.Size = new System.Drawing.Size(181, 43);
-            this.btn_Food.TabIndex = 3;
-            this.btn_Food.Text = "Select Food";
-            this.btn_Food.UseVisualStyleBackColor = true;
-            this.btn_Food.Click += new System.EventHandler(this.btn_Food_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(35, 40);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 20);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "First Name";
+            this.lbl_Fname.AutoSize = true;
+            this.lbl_Fname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Fname.ForeColor = System.Drawing.Color.White;
+            this.lbl_Fname.Location = new System.Drawing.Point(35, 95);
+            this.lbl_Fname.Name = "lbl_Fname";
+            this.lbl_Fname.Size = new System.Drawing.Size(86, 20);
+            this.lbl_Fname.TabIndex = 0;
+            this.lbl_Fname.Text = "First Name";
             // 
             // tb_Firstname
             // 
-            this.tb_Firstname.Location = new System.Drawing.Point(175, 40);
+            this.tb_Firstname.Location = new System.Drawing.Point(175, 95);
             this.tb_Firstname.Name = "tb_Firstname";
             this.tb_Firstname.Size = new System.Drawing.Size(181, 20);
             this.tb_Firstname.TabIndex = 1;
             // 
-            // label4
+            // lbl_Lname
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(35, 83);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 20);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Lastn Name";
+            this.lbl_Lname.AutoSize = true;
+            this.lbl_Lname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Lname.ForeColor = System.Drawing.Color.White;
+            this.lbl_Lname.Location = new System.Drawing.Point(35, 138);
+            this.lbl_Lname.Name = "lbl_Lname";
+            this.lbl_Lname.Size = new System.Drawing.Size(86, 20);
+            this.lbl_Lname.TabIndex = 0;
+            this.lbl_Lname.Text = "Last Name";
             // 
             // tb_Lastname
             // 
-            this.tb_Lastname.Location = new System.Drawing.Point(175, 83);
+            this.tb_Lastname.Location = new System.Drawing.Point(175, 138);
             this.tb_Lastname.Name = "tb_Lastname";
             this.tb_Lastname.Size = new System.Drawing.Size(181, 20);
             this.tb_Lastname.TabIndex = 2;
             // 
-            // label5
+            // lbl_Contact
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(35, 126);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 20);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Contact";
+            this.lbl_Contact.AutoSize = true;
+            this.lbl_Contact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Contact.ForeColor = System.Drawing.Color.White;
+            this.lbl_Contact.Location = new System.Drawing.Point(35, 181);
+            this.lbl_Contact.Name = "lbl_Contact";
+            this.lbl_Contact.Size = new System.Drawing.Size(65, 20);
+            this.lbl_Contact.TabIndex = 0;
+            this.lbl_Contact.Text = "Contact";
             // 
             // tb_Contact
             // 
-            this.tb_Contact.Location = new System.Drawing.Point(175, 126);
+            this.tb_Contact.Location = new System.Drawing.Point(175, 181);
             this.tb_Contact.Name = "tb_Contact";
             this.tb_Contact.Size = new System.Drawing.Size(181, 20);
             this.tb_Contact.TabIndex = 3;
             // 
-            // label6
+            // lbl_EventStart
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(417, 140);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 20);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Event Start";
+            this.lbl_EventStart.AutoSize = true;
+            this.lbl_EventStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_EventStart.ForeColor = System.Drawing.Color.White;
+            this.lbl_EventStart.Location = new System.Drawing.Point(417, 195);
+            this.lbl_EventStart.Name = "lbl_EventStart";
+            this.lbl_EventStart.Size = new System.Drawing.Size(89, 20);
+            this.lbl_EventStart.TabIndex = 0;
+            this.lbl_EventStart.Text = "Event Start";
             // 
-            // comboBox1
+            // cb_EventStartHour
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "01:00",
-            "02:00",
-            "03:00",
-            "04:00",
-            "05:00",
-            "06:00",
-            "07:00",
-            "08:00",
-            "09:00",
-            "10:00",
-            "11:00",
-            "12:00"});
-            this.comboBox1.Location = new System.Drawing.Point(557, 140);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(106, 33);
-            this.comboBox1.TabIndex = 4;
+            this.cb_EventStartHour.DropDownHeight = 125;
+            this.cb_EventStartHour.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_EventStartHour.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_EventStartHour.FormattingEnabled = true;
+            this.cb_EventStartHour.IntegralHeight = false;
+            this.cb_EventStartHour.Items.AddRange(new object[] {
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23"});
+            this.cb_EventStartHour.Location = new System.Drawing.Point(557, 189);
+            this.cb_EventStartHour.Name = "cb_EventStartHour";
+            this.cb_EventStartHour.Size = new System.Drawing.Size(57, 33);
+            this.cb_EventStartHour.TabIndex = 6;
             // 
-            // comboBox2
+            // lbl_EventEnd
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "AM",
-            "PM"});
-            this.comboBox2.Location = new System.Drawing.Point(669, 140);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(69, 33);
-            this.comboBox2.TabIndex = 4;
+            this.lbl_EventEnd.AutoSize = true;
+            this.lbl_EventEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_EventEnd.ForeColor = System.Drawing.Color.White;
+            this.lbl_EventEnd.Location = new System.Drawing.Point(417, 249);
+            this.lbl_EventEnd.Name = "lbl_EventEnd";
+            this.lbl_EventEnd.Size = new System.Drawing.Size(83, 20);
+            this.lbl_EventEnd.TabIndex = 0;
+            this.lbl_EventEnd.Text = "Event End";
             // 
-            // label7
+            // tTip_ErrorMessage
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(417, 194);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(83, 20);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Event End";
+            this.tTip_ErrorMessage.ForeColor = System.Drawing.Color.Red;
+            this.tTip_ErrorMessage.Tag = "";
+            this.tTip_ErrorMessage.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Error;
+            this.tTip_ErrorMessage.ToolTipTitle = "First Name is Empty";
             // 
-            // comboBox3
+            // btn_Save
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "01:00",
-            "02:00",
-            "03:00",
-            "04:00",
-            "05:00",
-            "06:00",
-            "07:00",
-            "08:00",
-            "09:00",
-            "10:00",
-            "11:00",
-            "12:00"});
-            this.comboBox3.Location = new System.Drawing.Point(557, 194);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(106, 33);
-            this.comboBox3.TabIndex = 4;
+            this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Save.Location = new System.Drawing.Point(28, 407);
+            this.btn_Save.Name = "btn_Save";
+            this.btn_Save.Size = new System.Drawing.Size(151, 43);
+            this.btn_Save.TabIndex = 0;
+            this.btn_Save.Text = "Save";
+            this.btn_Save.UseVisualStyleBackColor = true;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
-            // comboBox4
+            // cb_EventStartMinutes
             // 
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "AM",
-            "PM"});
-            this.comboBox4.Location = new System.Drawing.Point(669, 194);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(69, 33);
-            this.comboBox4.TabIndex = 4;
+            this.cb_EventStartMinutes.DropDownHeight = 125;
+            this.cb_EventStartMinutes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_EventStartMinutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_EventStartMinutes.FormattingEnabled = true;
+            this.cb_EventStartMinutes.IntegralHeight = false;
+            this.cb_EventStartMinutes.Items.AddRange(new object[] {
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50",
+            "51",
+            "52",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59"});
+            this.cb_EventStartMinutes.Location = new System.Drawing.Point(630, 189);
+            this.cb_EventStartMinutes.Name = "cb_EventStartMinutes";
+            this.cb_EventStartMinutes.Size = new System.Drawing.Size(57, 33);
+            this.cb_EventStartMinutes.TabIndex = 7;
             // 
-            // btn_Venue
+            // label8
             // 
-            this.btn_Venue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Venue.Location = new System.Drawing.Point(246, 243);
-            this.btn_Venue.Name = "btn_Venue";
-            this.btn_Venue.Size = new System.Drawing.Size(181, 43);
-            this.btn_Venue.TabIndex = 3;
-            this.btn_Venue.Text = "Select Venue";
-            this.btn_Venue.UseVisualStyleBackColor = true;
-            this.btn_Venue.Click += new System.EventHandler(this.btn_Venue_Click);
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(612, 190);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(23, 31);
+            this.label8.TabIndex = 0;
+            this.label8.Text = ":";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(612, 243);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(23, 31);
+            this.label9.TabIndex = 0;
+            this.label9.Text = ":";
+            // 
+            // cb_EventEndHour
+            // 
+            this.cb_EventEndHour.DropDownHeight = 125;
+            this.cb_EventEndHour.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_EventEndHour.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_EventEndHour.FormattingEnabled = true;
+            this.cb_EventEndHour.IntegralHeight = false;
+            this.cb_EventEndHour.Items.AddRange(new object[] {
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23"});
+            this.cb_EventEndHour.Location = new System.Drawing.Point(557, 246);
+            this.cb_EventEndHour.Name = "cb_EventEndHour";
+            this.cb_EventEndHour.Size = new System.Drawing.Size(57, 33);
+            this.cb_EventEndHour.TabIndex = 8;
+            // 
+            // cb_EventEndMinutes
+            // 
+            this.cb_EventEndMinutes.DropDownHeight = 125;
+            this.cb_EventEndMinutes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_EventEndMinutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_EventEndMinutes.FormattingEnabled = true;
+            this.cb_EventEndMinutes.IntegralHeight = false;
+            this.cb_EventEndMinutes.Items.AddRange(new object[] {
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50",
+            "51",
+            "52",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59"});
+            this.cb_EventEndMinutes.Location = new System.Drawing.Point(630, 242);
+            this.cb_EventEndMinutes.Name = "cb_EventEndMinutes";
+            this.cb_EventEndMinutes.Size = new System.Drawing.Size(57, 33);
+            this.cb_EventEndMinutes.TabIndex = 9;
+            // 
+            // btn_EditDate
+            // 
+            this.btn_EditDate.Image = ((System.Drawing.Image)(resources.GetObject("btn_EditDate.Image")));
+            this.btn_EditDate.Location = new System.Drawing.Point(362, 236);
+            this.btn_EditDate.Name = "btn_EditDate";
+            this.btn_EditDate.Size = new System.Drawing.Size(32, 33);
+            this.btn_EditDate.TabIndex = 10;
+            this.btn_EditDate.UseVisualStyleBackColor = true;
+            this.btn_EditDate.Click += new System.EventHandler(this.btn_EditDate_Click);
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker2.Location = new System.Drawing.Point(175, 296);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.TabIndex = 13;
             // 
             // lbl_EventDate
             // 
             this.lbl_EventDate.AutoSize = true;
             this.lbl_EventDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_EventDate.ForeColor = System.Drawing.Color.White;
-            this.lbl_EventDate.Location = new System.Drawing.Point(41, 194);
+            this.lbl_EventDate.Location = new System.Drawing.Point(35, 249);
             this.lbl_EventDate.Name = "lbl_EventDate";
-            this.lbl_EventDate.Size = new System.Drawing.Size(89, 20);
+            this.lbl_EventDate.Size = new System.Drawing.Size(99, 20);
             this.lbl_EventDate.TabIndex = 0;
-            this.lbl_EventDate.Text = "Event Date";
-            this.lbl_EventDate.Click += new System.EventHandler(this.lbl_EventDate_Click);
+            this.lbl_EventDate.Text = "0000-MM-dd";
             // 
-            // maskedTextBox1
+            // mtb_EventDate
             // 
-            this.maskedTextBox1.Enabled = false;
-            this.maskedTextBox1.Location = new System.Drawing.Point(39, 217);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(181, 20);
-            this.maskedTextBox1.TabIndex = 5;
-            this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
-            // 
-            // btn_Save
-            // 
-            this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Save.Location = new System.Drawing.Point(69, 243);
-            this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(151, 43);
-            this.btn_Save.TabIndex = 6;
-            this.btn_Save.Text = "Save";
-            this.btn_Save.UseVisualStyleBackColor = true;
-            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(669, 254);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "calendar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.mtb_EventDate.Enabled = false;
+            this.mtb_EventDate.Location = new System.Drawing.Point(175, 246);
+            this.mtb_EventDate.Name = "mtb_EventDate";
+            this.mtb_EventDate.Size = new System.Drawing.Size(177, 20);
+            this.mtb_EventDate.TabIndex = 15;
             // 
             // frm_EventDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(54)))), ((int)(((byte)(61)))));
-            this.ClientSize = new System.Drawing.Size(777, 416);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(777, 453);
+            this.Controls.Add(this.mtb_EventDate);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.btn_EditDate);
             this.Controls.Add(this.btn_Save);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.btn_Venue);
-            this.Controls.Add(this.btn_Food);
+            this.Controls.Add(this.cb_EventEndMinutes);
+            this.Controls.Add(this.cb_EventEndHour);
+            this.Controls.Add(this.cb_EventStartMinutes);
+            this.Controls.Add(this.cb_EventStartHour);
             this.Controls.Add(this.nud_NoofGuest);
             this.Controls.Add(this.tb_Contact);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lbl_EventEnd);
             this.Controls.Add(this.tb_Lastname);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.lbl_EventDate);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbl_EventStart);
+            this.Controls.Add(this.lbl_Contact);
             this.Controls.Add(this.tb_Firstname);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lbl_Lname);
             this.Controls.Add(this.tb_NameofEvent);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lbl_EventDate);
+            this.Controls.Add(this.lbl_Fname);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lbl_GuestCount);
+            this.Controls.Add(this.lbl_EventName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_EventDetails";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_EventDetails_FormClosing);
             this.Load += new System.EventHandler(this.frm_EventDetails_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nud_NoofGuest)).EndInit();
             this.ResumeLayout(false);
@@ -352,28 +525,29 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btn_Food;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Button btn_Venue;
-        public System.Windows.Forms.Label lbl_EventDate;
-        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label lbl_EventName;
+        private System.Windows.Forms.Label lbl_GuestCount;
+        private System.Windows.Forms.Label lbl_Fname;
+        private System.Windows.Forms.Label lbl_Lname;
+        private System.Windows.Forms.Label lbl_Contact;
+        private System.Windows.Forms.Label lbl_EventStart;
+        private System.Windows.Forms.ComboBox cb_EventStartHour;
+        private System.Windows.Forms.Label lbl_EventEnd;
+        private System.Windows.Forms.ToolTip tTip_ErrorMessage;
         private System.Windows.Forms.Button btn_Save;
         public System.Windows.Forms.TextBox tb_NameofEvent;
         public System.Windows.Forms.NumericUpDown nud_NoofGuest;
         public System.Windows.Forms.TextBox tb_Firstname;
         public System.Windows.Forms.TextBox tb_Lastname;
         public System.Windows.Forms.TextBox tb_Contact;
-        public System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cb_EventStartMinutes;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cb_EventEndHour;
+        private System.Windows.Forms.ComboBox cb_EventEndMinutes;
+        private System.Windows.Forms.Button btn_EditDate;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        public System.Windows.Forms.Label lbl_EventDate;
+        private System.Windows.Forms.MaskedTextBox mtb_EventDate;
     }
 }
