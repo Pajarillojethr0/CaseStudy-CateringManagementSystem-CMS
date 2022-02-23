@@ -13,6 +13,7 @@ namespace CaseStudy_CMS
 {
     public partial class UC_Dates : UserControl
     {
+        DateTime getTime = DateTime.Now;
         frm_EventDetails eventDetails;
         string year = UC_AddEvent.year.ToString();
         string month = UC_AddEvent.month.ToString();
@@ -66,6 +67,8 @@ namespace CaseStudy_CMS
             {
                 frm_EventDetails eventDetails = new frm_EventDetails();
                 eventDetails.lbl_EventDate.Text = fullDate;
+                eventDetails.cb_EventStartHour.Text = getTime.ToString("HH");
+                eventDetails.cb_EventStartMinutes.Text = getTime.ToString("mm");
                 eventDetails.ShowDialog();
             }
             ShowCountEvent();

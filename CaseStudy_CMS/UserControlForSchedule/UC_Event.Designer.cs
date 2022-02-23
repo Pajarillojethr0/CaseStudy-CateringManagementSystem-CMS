@@ -32,6 +32,7 @@
             this.lbl_EventName = new System.Windows.Forms.Label();
             this.btn_Edit = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
+            this.btn_View = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_EventName
@@ -39,7 +40,7 @@
             this.lbl_EventName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_EventName.Location = new System.Drawing.Point(3, 4);
             this.lbl_EventName.Name = "lbl_EventName";
-            this.lbl_EventName.Size = new System.Drawing.Size(285, 25);
+            this.lbl_EventName.Size = new System.Drawing.Size(252, 25);
             this.lbl_EventName.TabIndex = 0;
             this.lbl_EventName.Text = "Event Name";
             this.lbl_EventName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -66,11 +67,23 @@
             this.btn_Delete.UseVisualStyleBackColor = true;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
+            // btn_View
+            // 
+            this.btn_View.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_View.Image = ((System.Drawing.Image)(resources.GetObject("btn_View.Image")));
+            this.btn_View.Location = new System.Drawing.Point(261, 3);
+            this.btn_View.Name = "btn_View";
+            this.btn_View.Size = new System.Drawing.Size(30, 30);
+            this.btn_View.TabIndex = 1;
+            this.btn_View.UseVisualStyleBackColor = true;
+            this.btn_View.Click += new System.EventHandler(this.btn_View_Click);
+            // 
             // UC_Event
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btn_Delete);
+            this.Controls.Add(this.btn_View);
             this.Controls.Add(this.btn_Edit);
             this.Controls.Add(this.lbl_EventName);
             this.Name = "UC_Event";
@@ -85,5 +98,6 @@
         public System.Windows.Forms.Label lbl_EventName;
         private System.Windows.Forms.Button btn_Edit;
         private System.Windows.Forms.Button btn_Delete;
+        private System.Windows.Forms.Button btn_View;
     }
 }

@@ -133,7 +133,7 @@ namespace CaseStudy_CMS
 
         }
 
-        public void EditEvent(string id)
+        public void getEventDetails(string id, bool isShow)
         {
             // this block of code is to add the user control in the flowlayout
             string query = "SELECT * FROM tbl_schedule WHERE ID = '" + id + "'";
@@ -158,11 +158,31 @@ namespace CaseStudy_CMS
                 eventDetails.tb_Firstname.Text = (sqlDataReader["Firstname"].ToString());
                 eventDetails.tb_Lastname.Text = (sqlDataReader["Lastname"].ToString());
                 eventDetails.tb_Contact.Text = (sqlDataReader["Contact"].ToString());
-                eventDetails.Text = Convert.ToDateTime(sqlDataReader["Event_Date"]).ToString("yyyy-MM-dd");
+                eventDetails.lbl_EventDate.Text = Convert.ToDateTime(sqlDataReader["Event_Date"]).ToString("yyyy-MM-dd");
             }
             sqlDataReader.Close();
             conDb.sqlConnection.Close();
-            eventDetails.ShowDialog();
+            if(isShow == true)
+            {
+                eventDetails.tb_Firstname.Enabled = false;
+                eventDetails.tb_Lastname.Enabled = false;
+                eventDetails.tb_Contact.Enabled = false;
+                eventDetails.btn_EditDate.Visible = false;
+                eventDetails.tb_NameofEvent.Enabled = false;
+                eventDetails.nud_NoofGuest.Enabled = false;
+                eventDetails.cb_EventStartHour.Enabled = false;
+                eventDetails.cb_EventStartMinutes.Enabled = false;
+                eventDetails.cb_EventEndHour.Enabled = false;
+                eventDetails.cb_EventEndMinutes.Enabled = false;
+                eventDetails.btn_Save.Visible = false;
+                eventDetails.ShowDialog();
+            }
+            else
+            {
+                eventDetails.btn_EditDate.Visible = true;
+                eventDetails.ShowDialog();
+            }
+            
         }
         
     }

@@ -51,7 +51,6 @@
             this.cb_EventEndHour = new System.Windows.Forms.ComboBox();
             this.cb_EventEndMinutes = new System.Windows.Forms.ComboBox();
             this.btn_EditDate = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.lbl_EventDate = new System.Windows.Forms.Label();
             this.mtb_EventDate = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nud_NoofGuest)).BeginInit();
@@ -70,9 +69,12 @@
             // 
             // tb_NameofEvent
             // 
+            this.tb_NameofEvent.BackColor = System.Drawing.Color.White;
+            this.tb_NameofEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_NameofEvent.ForeColor = System.Drawing.Color.Black;
             this.tb_NameofEvent.Location = new System.Drawing.Point(557, 93);
             this.tb_NameofEvent.Name = "tb_NameofEvent";
-            this.tb_NameofEvent.Size = new System.Drawing.Size(181, 20);
+            this.tb_NameofEvent.Size = new System.Drawing.Size(181, 26);
             this.tb_NameofEvent.TabIndex = 4;
             // 
             // lbl_GuestCount
@@ -80,7 +82,7 @@
             this.lbl_GuestCount.AutoSize = true;
             this.lbl_GuestCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_GuestCount.ForeColor = System.Drawing.Color.White;
-            this.lbl_GuestCount.Location = new System.Drawing.Point(400, 140);
+            this.lbl_GuestCount.Location = new System.Drawing.Point(417, 138);
             this.lbl_GuestCount.Name = "lbl_GuestCount";
             this.lbl_GuestCount.Size = new System.Drawing.Size(131, 20);
             this.lbl_GuestCount.TabIndex = 0;
@@ -88,6 +90,9 @@
             // 
             // nud_NoofGuest
             // 
+            this.nud_NoofGuest.BackColor = System.Drawing.Color.White;
+            this.nud_NoofGuest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nud_NoofGuest.ForeColor = System.Drawing.Color.Black;
             this.nud_NoofGuest.Location = new System.Drawing.Point(557, 143);
             this.nud_NoofGuest.Maximum = new decimal(new int[] {
             10000,
@@ -100,8 +105,9 @@
             0,
             0});
             this.nud_NoofGuest.Name = "nud_NoofGuest";
-            this.nud_NoofGuest.Size = new System.Drawing.Size(181, 20);
+            this.nud_NoofGuest.Size = new System.Drawing.Size(57, 26);
             this.nud_NoofGuest.TabIndex = 5;
+            this.nud_NoofGuest.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nud_NoofGuest.Value = new decimal(new int[] {
             1,
             0,
@@ -121,9 +127,12 @@
             // 
             // tb_Firstname
             // 
+            this.tb_Firstname.BackColor = System.Drawing.Color.White;
+            this.tb_Firstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Firstname.ForeColor = System.Drawing.Color.Black;
             this.tb_Firstname.Location = new System.Drawing.Point(175, 95);
             this.tb_Firstname.Name = "tb_Firstname";
-            this.tb_Firstname.Size = new System.Drawing.Size(181, 20);
+            this.tb_Firstname.Size = new System.Drawing.Size(181, 26);
             this.tb_Firstname.TabIndex = 1;
             // 
             // lbl_Lname
@@ -139,9 +148,12 @@
             // 
             // tb_Lastname
             // 
+            this.tb_Lastname.BackColor = System.Drawing.Color.White;
+            this.tb_Lastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Lastname.ForeColor = System.Drawing.Color.Black;
             this.tb_Lastname.Location = new System.Drawing.Point(175, 138);
             this.tb_Lastname.Name = "tb_Lastname";
-            this.tb_Lastname.Size = new System.Drawing.Size(181, 20);
+            this.tb_Lastname.Size = new System.Drawing.Size(181, 26);
             this.tb_Lastname.TabIndex = 2;
             // 
             // lbl_Contact
@@ -157,9 +169,12 @@
             // 
             // tb_Contact
             // 
+            this.tb_Contact.BackColor = System.Drawing.Color.White;
+            this.tb_Contact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Contact.ForeColor = System.Drawing.Color.Black;
             this.tb_Contact.Location = new System.Drawing.Point(175, 181);
             this.tb_Contact.Name = "tb_Contact";
-            this.tb_Contact.Size = new System.Drawing.Size(181, 20);
+            this.tb_Contact.Size = new System.Drawing.Size(181, 26);
             this.tb_Contact.TabIndex = 3;
             // 
             // lbl_EventStart
@@ -167,7 +182,7 @@
             this.lbl_EventStart.AutoSize = true;
             this.lbl_EventStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_EventStart.ForeColor = System.Drawing.Color.White;
-            this.lbl_EventStart.Location = new System.Drawing.Point(417, 195);
+            this.lbl_EventStart.Location = new System.Drawing.Point(442, 190);
             this.lbl_EventStart.Name = "lbl_EventStart";
             this.lbl_EventStart.Size = new System.Drawing.Size(89, 20);
             this.lbl_EventStart.TabIndex = 0;
@@ -215,7 +230,7 @@
             this.lbl_EventEnd.AutoSize = true;
             this.lbl_EventEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_EventEnd.ForeColor = System.Drawing.Color.White;
-            this.lbl_EventEnd.Location = new System.Drawing.Point(417, 249);
+            this.lbl_EventEnd.Location = new System.Drawing.Point(442, 244);
             this.lbl_EventEnd.Name = "lbl_EventEnd";
             this.lbl_EventEnd.Size = new System.Drawing.Size(83, 20);
             this.lbl_EventEnd.TabIndex = 0;
@@ -231,7 +246,8 @@
             // btn_Save
             // 
             this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Save.Location = new System.Drawing.Point(28, 407);
+            this.btn_Save.ForeColor = System.Drawing.Color.Black;
+            this.btn_Save.Location = new System.Drawing.Point(39, 304);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(151, 43);
             this.btn_Save.TabIndex = 0;
@@ -366,7 +382,7 @@
             "21",
             "22",
             "23"});
-            this.cb_EventEndHour.Location = new System.Drawing.Point(557, 246);
+            this.cb_EventEndHour.Location = new System.Drawing.Point(557, 242);
             this.cb_EventEndHour.Name = "cb_EventEndHour";
             this.cb_EventEndHour.Size = new System.Drawing.Size(57, 33);
             this.cb_EventEndHour.TabIndex = 8;
@@ -452,15 +468,8 @@
             this.btn_EditDate.Size = new System.Drawing.Size(32, 33);
             this.btn_EditDate.TabIndex = 10;
             this.btn_EditDate.UseVisualStyleBackColor = true;
+            this.btn_EditDate.Visible = false;
             this.btn_EditDate.Click += new System.EventHandler(this.btn_EditDate_Click);
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePicker2.Location = new System.Drawing.Point(175, 296);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 13;
             // 
             // lbl_EventDate
             // 
@@ -472,23 +481,25 @@
             this.lbl_EventDate.Size = new System.Drawing.Size(99, 20);
             this.lbl_EventDate.TabIndex = 0;
             this.lbl_EventDate.Text = "0000-MM-dd";
+            this.lbl_EventDate.Visible = false;
             // 
             // mtb_EventDate
             // 
+            this.mtb_EventDate.BackColor = System.Drawing.Color.White;
             this.mtb_EventDate.Enabled = false;
-            this.mtb_EventDate.Location = new System.Drawing.Point(175, 246);
+            this.mtb_EventDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtb_EventDate.ForeColor = System.Drawing.Color.Black;
+            this.mtb_EventDate.Location = new System.Drawing.Point(175, 236);
             this.mtb_EventDate.Name = "mtb_EventDate";
-            this.mtb_EventDate.Size = new System.Drawing.Size(177, 20);
+            this.mtb_EventDate.Size = new System.Drawing.Size(177, 26);
             this.mtb_EventDate.TabIndex = 15;
             // 
             // frm_EventDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(54)))), ((int)(((byte)(61)))));
             this.ClientSize = new System.Drawing.Size(777, 453);
             this.Controls.Add(this.mtb_EventDate);
-            this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.btn_EditDate);
             this.Controls.Add(this.btn_Save);
             this.Controls.Add(this.cb_EventEndMinutes);
@@ -510,6 +521,8 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.lbl_GuestCount);
             this.Controls.Add(this.lbl_EventName);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -531,23 +544,22 @@
         private System.Windows.Forms.Label lbl_Lname;
         private System.Windows.Forms.Label lbl_Contact;
         private System.Windows.Forms.Label lbl_EventStart;
-        private System.Windows.Forms.ComboBox cb_EventStartHour;
         private System.Windows.Forms.Label lbl_EventEnd;
         private System.Windows.Forms.ToolTip tTip_ErrorMessage;
-        private System.Windows.Forms.Button btn_Save;
         public System.Windows.Forms.TextBox tb_NameofEvent;
         public System.Windows.Forms.NumericUpDown nud_NoofGuest;
         public System.Windows.Forms.TextBox tb_Firstname;
         public System.Windows.Forms.TextBox tb_Lastname;
         public System.Windows.Forms.TextBox tb_Contact;
-        private System.Windows.Forms.ComboBox cb_EventStartMinutes;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox cb_EventEndHour;
-        private System.Windows.Forms.ComboBox cb_EventEndMinutes;
-        private System.Windows.Forms.Button btn_EditDate;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         public System.Windows.Forms.Label lbl_EventDate;
         private System.Windows.Forms.MaskedTextBox mtb_EventDate;
+        public System.Windows.Forms.Button btn_EditDate;
+        public System.Windows.Forms.ComboBox cb_EventStartHour;
+        public System.Windows.Forms.ComboBox cb_EventStartMinutes;
+        public System.Windows.Forms.ComboBox cb_EventEndHour;
+        public System.Windows.Forms.ComboBox cb_EventEndMinutes;
+        public System.Windows.Forms.Button btn_Save;
     }
 }

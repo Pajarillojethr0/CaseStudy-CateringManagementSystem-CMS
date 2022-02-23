@@ -12,6 +12,8 @@ namespace CaseStudy_CMS
 {
     public partial class UC_Event : UserControl
     {
+        SQLQueries queries;
+        frm_EventDetails eventDetails;
         public string eventID;
 
         public UC_Event()
@@ -26,12 +28,18 @@ namespace CaseStudy_CMS
 
         private void btn_Edit_Click(object sender, EventArgs e)
         {
-            SQLQueries queries = new SQLQueries();
-            queries.EditEvent(eventID);
+            queries = new SQLQueries();
+            queries.getEventDetails(eventID, false);
         }
 
         private void UC_Event_Load(object sender, EventArgs e)
         {
+        }
+
+        private void btn_View_Click(object sender, EventArgs e)
+        {
+            queries = new SQLQueries();
+            queries.getEventDetails(eventID, true);
         }
     }
 }

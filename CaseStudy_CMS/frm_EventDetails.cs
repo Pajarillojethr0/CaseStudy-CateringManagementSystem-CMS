@@ -15,6 +15,7 @@ namespace CaseStudy_CMS
     {
         //public bool doResize;
         public string eventID;
+     
         public frm_EventDetails()
         {
             InitializeComponent();
@@ -28,7 +29,7 @@ namespace CaseStudy_CMS
             mtb_EventDate.Mask = "0000-00-00";
             mtb_EventDate.MaskInputRejected += new MaskInputRejectedEventHandler(mtb_EventDate_MaskInputRejected);
             tb_Contact.MaxLength = 11;
-      
+            
             SQLQueries queries = new SQLQueries();
            // queries.DateFormat(eventID);
         }
@@ -65,9 +66,18 @@ namespace CaseStudy_CMS
             }
             else
             {
-                SQLQueries queries = new SQLQueries();
-                queries.InsertEventDetails(nameofEvent, noofGuest, firstName, lastName, contact, date);
-                this.Close();
+                
+                if(eventID == null)
+                {
+                    //SQLQueries queries = new SQLQueries();
+                    //queries.InsertEventDetails(nameofEvent, noofGuest, firstName, lastName, contact, date);
+                    //this.Close();
+                }
+                else
+                {
+                    MessageBox.Show(eventID.ToString() + " ============ Edit");
+                }
+               
             }
         }
 
