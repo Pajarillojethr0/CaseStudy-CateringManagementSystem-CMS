@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -111,6 +113,7 @@ namespace CaseStudy_CMS
             }
 
         }
+
         public void InsertEventDetails(string nameofEvent, string noofGuest, string fName, string lName, string contact, string date)
         {
             ConnectDatabase conDb = new ConnectDatabase();
@@ -185,5 +188,39 @@ namespace CaseStudy_CMS
             
         }
         
+        public void loadFood()
+        {
+            // this block of code is to add the user control in the flowlayout
+            string query = "SELECT * FROM foodmenu";
+
+            ConnectDatabase conDb = new ConnectDatabase();
+            conDb.connectSql();
+            //open connection
+            conDb.sqlConnection.Open();
+            MySqlCommand sqlCommand;
+
+            MySqlDataReader sqlDataReader;
+            sqlCommand = new MySqlCommand(query, conDb.sqlConnection);
+
+            sqlDataReader = sqlCommand.ExecuteReader();
+
+            UC_Food userFood = new UC_Food();
+            frm_EventDetails eventDetails = new frm_EventDetails();
+            while (sqlDataReader.Read())
+            {
+                userFood.foodID = (sqlDataReader["food_ID"].ToString());
+                userFood.lbl_FoodName.Text = (sqlDataReader["Food_Name"].ToString());
+                userFood.lbl_Price.Text = (sqlDataReader["Price"].ToString());
+
+                //get im
+                byte[] imgData = (byte[])(sqlDataReader["Food_Img"]);
+                MemoryStream ms = new MemoryStream(imgData);
+                userFood.pb_Food.Image = Image.FromStream(ms);
+
+                eventDetails.flp_Food.Controls.Add(userFood);
+            }
+            sqlDataReader.Close();
+            conDb.sqlConnection.Close();
+        }
     }
 }

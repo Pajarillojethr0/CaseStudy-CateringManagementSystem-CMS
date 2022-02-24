@@ -31,7 +31,6 @@
             this.topPanel = new System.Windows.Forms.Panel();
             this.fillPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.uC_Calendar1 = new CaseStudy_CMS.UC_Calendar();
             this.fillPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +46,6 @@
             // fillPanel
             // 
             this.fillPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(54)))), ((int)(((byte)(61)))));
-            this.fillPanel.Controls.Add(this.uC_Calendar1);
             this.fillPanel.Controls.Add(this.label1);
             this.fillPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fillPanel.Location = new System.Drawing.Point(0, 40);
@@ -67,14 +65,6 @@
             this.label1.Text = "This is Task";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // uC_Calendar1
-            // 
-            this.uC_Calendar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(54)))), ((int)(((byte)(61)))));
-            this.uC_Calendar1.Location = new System.Drawing.Point(188, 67);
-            this.uC_Calendar1.Name = "uC_Calendar1";
-            this.uC_Calendar1.Size = new System.Drawing.Size(563, 407);
-            this.uC_Calendar1.TabIndex = 1;
-            // 
             // UC_Task
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -93,6 +83,5 @@
         private System.Windows.Forms.Panel topPanel;
         private System.Windows.Forms.Panel fillPanel;
         private System.Windows.Forms.Label label1;
-        private UC_Calendar uC_Calendar1;
     }
 }

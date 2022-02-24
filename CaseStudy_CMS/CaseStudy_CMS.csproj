@@ -65,29 +65,17 @@
       <DependentUpon>frm_EventDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="SQLQueries.cs" />
-    <Compile Include="UserControlForSchedule\smallCalendar\UC_Calendar.cs">
+    <Compile Include="UserControlForSchedule\UC_Food.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlForSchedule\smallCalendar\UC_Calendar.Designer.cs">
-      <DependentUpon>UC_Calendar.cs</DependentUpon>
+    <Compile Include="UserControlForSchedule\UC_Food.Designer.cs">
+      <DependentUpon>UC_Food.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlForSchedule\frm_Event.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserControlForSchedule\frm_Event.Designer.cs">
       <DependentUpon>frm_Event.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControlForSchedule\smallCalendar\UC_SmallBlank.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControlForSchedule\smallCalendar\UC_SmallBlank.Designer.cs">
-      <DependentUpon>UC_SmallBlank.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControlForSchedule\smallCalendar\UC_SmallDates.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControlForSchedule\smallCalendar\UC_SmallDates.Designer.cs">
-      <DependentUpon>UC_SmallDates.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlForSchedule\UC_Blank.cs">
       <SubType>UserControl</SubType>
@@ -177,17 +165,8 @@
     <EmbeddedResource Include="frm_EventDetails.resx">
       <DependentUpon>frm_EventDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlForSchedule\smallCalendar\UC_Calendar.resx">
-      <DependentUpon>UC_Calendar.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControlForSchedule\frm_Event.resx">
       <DependentUpon>frm_Event.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControlForSchedule\smallCalendar\UC_SmallBlank.resx">
-      <DependentUpon>UC_SmallBlank.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControlForSchedule\smallCalendar\UC_SmallDates.resx">
-      <DependentUpon>UC_SmallDates.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlForSchedule\UC_Blank.resx">
       <DependentUpon>UC_Blank.cs</DependentUpon>
@@ -197,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlForSchedule\UC_Event.resx">
       <DependentUpon>UC_Event.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlForSchedule\UC_Food.resx">
+      <DependentUpon>UC_Food.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Account.resx">
       <DependentUpon>UC_Account.cs</DependentUpon>
